@@ -1,7 +1,12 @@
 .wrapper {
     width: 90%;
-    margin: 20px auto;
+    margin: 0 auto;
 }
+
+.heigt-space{
+    margin: 20px 20px 0;
+}
+
 
 // Boutton ROUGE
 
@@ -18,6 +23,21 @@
 
 // fin
 
+// survole img 
+
+.survole {
+    overflow: hidden;
+    img {
+        transition: .3s all ease-in-out;
+        object-fit: cover;
+        display: block;
+        width: 100%;
+    }
+}
+
+.survole:hover img {
+    transform: scale(1.05);
+}
 
 // Section Politics
 .politices-sec {
@@ -58,3 +78,261 @@
 
 // TOdays Section
 
+.today-sec {
+    .news {
+        h2 a{
+            color: #000;
+            font-weight: 500;
+            font-size: 1.3em;
+        }
+    }
+}
+
+.comments {
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 0.7em;
+    letter-spacing: 0.1em;
+}
+
+.titre-sec {
+    margin-top: 100px;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+    font-size: 1.3em;
+    color: rgb(51, 51, 51);
+    &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: $pcolor;
+        margin-top: 20px;
+    }
+}
+
+
+// Section breaking news
+
+.breaking-sec {
+    .titre-sec {
+        margin-bottom: 20px;
+    }
+}
+
+.breaking-container {
+    position: relative;
+    margin-bottom: 30px;
+    .break-red {
+        position: absolute;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.514);
+        z-index: 2;
+        p {
+            line-height: normal;
+            background-color: $mycolor;
+            width: 50%;
+            margin: 0;
+            padding: 8px 0;
+            text-align: center;
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 0.8em;
+        }
+    }
+    .titre-breaking {
+        position: absolute;
+        bottom: 0;
+        padding-left: 20px;
+        color: #fff;
+        font-size: 1.2em;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.05) 1%, #000 98%, #000 99%);
+    }
+    img{
+        aspect-ratio: 1 / 1 ;
+        object-fit: cover;
+        width: 100%;
+    }
+}
+
+// DON'T mISS Section
+
+.dont-miss-conntainer {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+    .survole {
+        margin-right: 20px;
+    }
+    .dont-text {
+        margin-top: 5px;
+        a {
+            font-family: 'PT Serif', serif;
+            color: #000;
+            &:hover {
+                color: $mycolor;
+            }
+        }
+        .date {
+            margin-top: 20px;
+        }
+    }
+}
+
+// SUbscribe sectiion
+
+.subcribe-sec {
+    margin-bottom: 20px;
+    .titre-sec {
+        margin-top: 20px;
+    }
+}
+
+.sub-form {
+    form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        input:nth-of-type(1) {
+            padding: 15px 15px;
+            border: 0;
+            background-color: rgb(240, 240, 240);
+            margin-bottom: 15px;
+            font-size: 0.8em;
+        }
+        input:nth-of-type(2) {
+            padding: 15px 0;
+            border: 0;
+            background-color: $mycolor;
+            margin-bottom: 15px;
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 0.8em;
+        }
+    }
+}
+
+//  Others INFO SECTION
+
+.others-info-grid {
+    margin-bottom: 180px;
+}
+
+.titre-video-big {
+    a{
+        color: #000;
+        font-size: 1.2em;
+        h4 {
+            font-weight: 100;
+        }
+    }
+}
+
+.titre-others {
+    .sec-red {
+        a {
+            color: #fff;
+            padding: 3px 15px;
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: 1em;
+        }
+    }
+    a{
+        color: #000;
+        font-size: 1.2em;
+        h4 {
+            font-weight: 100;
+        }
+    }
+}
+
+
+// Section video
+
+.section-bc-grey {
+    background-color: rgb(245, 245, 245);
+    padding: 80px 0;
+}
+
+.titre-video-bc {
+    color: #000;
+    font-size: 1.1em;
+    margin: 20px 0 40px;
+}
+
+
+// footer
+footer {
+    background: url("../img/footer.jpg") center/cover;
+    position: relative;
+    &::after {
+        content:"";
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgb(0,0,0);
+        background: linear-gradient(59deg, rgba(0,0,0,0.8231441048034934) 0%, rgba(0,0,0,0.5152838427947598) 100%); 
+    }
+}
+
+.nav-foot {
+    position: relative;
+    z-index: 3;
+    padding: 100px 0 140px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    .foot-container {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 50px;
+        h3{
+            color: #fff;
+            font-size: 1.5em;
+            font-weight: 300;
+        }
+        a {
+            color: #a3a3a3;
+            font-family: 'PT Serif', serif;
+            line-height: 1.5;
+        }
+    }
+}
+
+
+.copyright {
+    position: absolute;
+    text-align: center;
+    color: #fff;
+    bottom: 0;
+    z-index: 3;
+    margin: 20px 20px;
+    &::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: #a3a3a3;
+        margin-bottom: 20px;
+    }
+}
+
+// ****  Media queries *****
+
+@media screen and (min-width:1150px) {
+    header {
+    background-color: rgba(27, 220, 20, 0.313);
+    width: 1150px;
+    margin: 0 auto;
+        .wrapper {
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+}
