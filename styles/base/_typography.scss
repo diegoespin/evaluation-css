@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap');
+
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/chevron-right.css');
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'PT Serif', serif;
+}
+
+p {
+    color: $pcolor;
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+a {
+    text-decoration: none;
+}
+
+// Chevron btn
+
+.gg-chevron-right::after {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid;
+    border-right: 2px solid;
+    transform: rotate(-45deg);
+    left: 160px;
+    top: -16px
+}
+
+// fin chevron
