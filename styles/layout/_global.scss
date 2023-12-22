@@ -23,6 +23,32 @@
 
 // fin
 
+
+// font-aweson
+.nav-loupe {
+    a{
+        color: #000;
+    }
+}
+#searchbtn i{
+    font-size: 20px;
+}
+
+.social-net-btn{
+    a {
+        margin-right: 20px;
+        color: #0000002d;
+        transition: 0.5s all ease-in-out;
+        font-size: 20px;
+        &:hover{
+            color: $mycolor;
+        }
+    }
+}
+
+
+
+
 // survole img 
 
 .survole {
@@ -40,6 +66,10 @@
 }
 
 // Section Politics
+
+.intro-grid{
+    margin-top: 80px;
+}
 .politices-sec {
     h1 {
         font-size: 1.5em;
@@ -47,23 +77,28 @@
     }
     .btn-and-social {
         margin: 10px 0;
-        .btn-continue {
-            padding: 20px 0;
-            margin: 20px 0;
-            a {
-                color: #000;
-                border: 1px solid;
-                padding: 20px;
-                font-family: 'PT Serif', serif;
-                text-transform: uppercase;
-                display: block;
-                width: 220px;
-                height: 60px;
-            }
-        }
     }
     .date {
         margin-bottom: 50px;
+    }
+}
+
+.btn-continue {
+    padding: 20px 0;
+    margin: 20px 0;
+    a {
+        color: #000;
+        border: 1px solid;
+        padding: 20px;
+        font-family: 'PT Serif', serif;
+        text-transform: uppercase;
+        display: block;
+        width: 220px;
+        height: 60px;
+        transition: 0.4s all ease-in-out;
+        &:hover {
+            color: $mycolor;
+        }
     }
 }
 
@@ -256,10 +291,40 @@
     padding: 80px 0;
 }
 
+.video-img-bc {
+    .survole{
+        position: relative;
+    }
+
+    .blk-img:hover{
+        &::after {
+            content:"";
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgb(0,0,0);
+            background: linear-gradient(59deg, rgba(0,0,0,0.8231441048034934) 0%, rgba(0,0,0,0.5152838427947598) 100%); 
+        }
+    }
+}
 .titre-video-bc {
     color: #000;
     font-size: 1.1em;
     margin: 20px 0 40px;
+}
+
+.play-video{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    i {
+        color: #fff;
+    }
 }
 
 
@@ -326,7 +391,10 @@ footer {
     }
 }
 
-// about us
+
+
+
+// PAGE about us
 
 .team-container {
     display: grid;
@@ -343,12 +411,141 @@ footer {
 
 .about-container {
     background-color: #e6e6e6;
+    padding: 30px 0;
     .about-flex {
         display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
     }
 }
 
 
+.jobs-soc {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+    span{
+        font-style: italic;
+        font-size: 1.2em;
+        font-family: 'PT Serif', serif;
+        color: #6b6b6b;
+    }
+    .social-net-btn {
+        a {
+            font-size: 12px;
+            margin-right: 5px;
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+    }
+}
+.name {
+    h3{
+    font-weight: 300;
+    font-size: 1.5em;
+    color: #6b6b6b;
+    margin: 10px 0;
+    }
+}
+
+
+.nav-page {
+    margin-bottom: 20px;
+}
+
+.join-team-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 3;
+    top: 60px;
+    .join-team-txt {
+        text-align: center;
+        color: #fff;
+        p{
+            color: #fff;
+        }
+    }
+    .btn-continue {
+        margin: 20px auto;
+        a{
+            color: #fff;
+            &:hover {
+                color: $mycolor;
+            }
+        }
+    }
+}
+.cover-img {
+    background: url("../img/cta.jpg") center/cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 400px;
+    &::after {
+        content:"";
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgb(0,0,0);
+        background: linear-gradient(59deg, rgba(0,0,0,0.8231441048034934) 0%, rgba(0,0,0,0.5152838427947598) 100%); 
+    }
+}
+
+
+
+
+// PAGE CONTACT
+
+.sec-contact{
+    margin-bottom: 100px;
+}
+
+.contact-grid{
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form{
+    form{
+        display: flex;
+        flex-direction: column;
+        input {
+            border: none;
+            background-color: #f3f3f3;
+            padding: 20px 15px;
+            margin: 20px 0;
+        }
+        input:last-child{
+            border: 2px solid #000;
+            background-color: #fff;
+            text-transform: uppercase;
+        }
+        textarea{
+            background-color: #f3f3f3;
+            border: none;
+            padding: 20px 15px;
+        }
+    }
+}
+
+.txt-form {
+    font-weight: 600;
+}
+
+.google-map {
+        
+    iframe {
+        width: 100%;
+        display: block;
+    }
+}
 
 
 
@@ -500,7 +697,7 @@ footer {
     // PAGE ABOUT US
     .team-container {
         display: grid;
-        gap: 20px;
+        gap: 40px;
         grid-template-columns: repeat(2, 1fr);
     }
     .team {
@@ -514,6 +711,39 @@ footer {
             gap: 20px;
         }
     }
+    .nav-page {
+        margin-bottom: 40px;
+    }
+
+
+
+    
+    // PAGE  Contact 
+
+    .sec-contact{
+        margin-bottom: 100px;
+    }
+
+    .contact-grid{
+        display: grid;
+        grid-template-columns: 60% 40%;
+        gap: 40px;
+    }
+
+    .contact-form{
+        form{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .btn-and-social {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
 }
 
 // ---------------------- MEDDIA QUERIES 1350px ---------------------------
@@ -530,7 +760,7 @@ footer {
     }
     
     .wrapper {
-        width: 70%;
+        width: 60%;
       }
 
       .intro-grid {
@@ -541,7 +771,7 @@ footer {
 
     .team-container {
         display: grid;
-        gap: 20px;
+        gap: 40px;
         grid-template-columns: repeat(4, [col-start] 1fr);
     }
 
@@ -552,5 +782,15 @@ footer {
             display: flex;
             gap: 20px;
         }
+    }
+    .nav-page {
+        margin-bottom: 20px;
+    }
+
+    .btn-and-social {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
     }
 }
